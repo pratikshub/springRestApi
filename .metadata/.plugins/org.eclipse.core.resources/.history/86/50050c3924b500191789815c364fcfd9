@@ -1,0 +1,26 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/restdB
+    username: shubham
+    password: shubham
+    driver-class-name: org.postgresql.Driver
+    initialization-mode: always
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        jdbc: null
+      lob:
+        non-contextual-creation: true
+    databasePlatform: org.hibernate.dialect.PostgreSQL9Dialect
+logging:
+  level:
+    org:
+      hibernate:
+        type: trace

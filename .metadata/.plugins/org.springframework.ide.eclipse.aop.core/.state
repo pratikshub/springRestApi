@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="restapiwithauth"/>
+<aop-project name="restauth"/>
+<aop-project name="restapiwithauthdB"/>
+<aop-project name="RestApi"/>
+<aop-project name="restapi"/>
+</aop-reference-model>

@@ -1,0 +1,103 @@
+package com.restapi.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "employees")
+public class Employee {
+	private int id;
+	private String name;
+	private int age;
+	private String address;
+	private String email;
+	private String designation;
+	private int salary;
+
+	public Employee() {
+
+	}
+
+	public Employee(String name, int age, String address, String email, String designation, int salary) {
+		this.name = name;
+		this.age = age;
+		this.address = address;
+		this.email = email;
+		this.designation = designation;
+		this.salary = salary;
+	}
+
+	@Id
+	@GeneratedValue
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	@Column(name = "name", nullable = false)
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Column(name = "age", nullable = false)
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	@Column(name = "address", nullable = false)
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	@Column(name = "email", nullable = false)
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	@Column(name = "designation", nullable = false)
+	public String getDesignation() {
+		return designation;
+	}
+
+	public void setDesignation(String designation) {
+		this.designation = designation;
+	}
+
+	@Column(name = "salary", nullable = false)
+	public int getSalary() {
+		return salary;
+	}
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", age=" + age + ", address=" + address + ", email=" + email
+				+ ", designation=" + designation + ", salary=" + salary + "]";
+	}
+
+}
